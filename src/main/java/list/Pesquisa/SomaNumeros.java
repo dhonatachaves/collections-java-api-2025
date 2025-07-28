@@ -5,16 +5,6 @@ import java.util.List;
 
 public class SomaNumeros {
     private List<Integer> numerosLista;
-    private int maiorValor;
-    private int menorValor;
-
-    public int getMaiorValor() {
-        return maiorValor;
-    }
-
-    public int getMenorValor() {
-        return menorValor;
-    }
 
     public SomaNumeros() {
         this.numerosLista = new ArrayList<>();
@@ -37,11 +27,13 @@ public class SomaNumeros {
 
     public int encontrarMaiorNumero() {
         if(!numerosLista.isEmpty()) {
-            this.maiorValor = numerosLista.get(0);
-            for(int i = 1; i < numerosLista.size(); i++) {
-                if(numerosLista.get(i) > maiorValor) {
-                    maiorValor = numerosLista.get(i);
-                }
+            return 0;
+        }
+
+        int maiorValor = numerosLista.get(0);
+        for(int i = 1; i < numerosLista.size(); i++) {
+            if(numerosLista.get(i) > maiorValor) {
+                maiorValor = numerosLista.get(i);
             }
         }
 
@@ -50,12 +42,14 @@ public class SomaNumeros {
 
     public int encontrarMenorNumero() {
         if(!numerosLista.isEmpty()) {
-            this.menorValor = numerosLista.get(0);
+            return 0;
+        }
 
-            for(int i = 1; i < numerosLista.size(); i++ ) {
-                if(numerosLista.get(i) < this.menorValor) {
-                    this.menorValor = numerosLista.get(i);
-                }
+        int menorValor = numerosLista.get(0);
+
+        for(int i = 1; i < numerosLista.size(); i++ ) {
+            if(numerosLista.get(i) < menorValor) {
+                menorValor = numerosLista.get(i);
             }
         }
 
